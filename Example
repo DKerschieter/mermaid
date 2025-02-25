@@ -1,3 +1,4 @@
+```mermaid
 graph TD;
     A[User] -->|Internet| B[Load Balancer]
     B --> C[Web Server Cluster]
