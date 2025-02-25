@@ -1,3 +1,5 @@
+# Cloud-Based Architecture Diagram
+
 ```mermaid
 graph TD;
     A[User] -->|Internet| B[Load Balancer]
