@@ -28,18 +28,19 @@ graph TD;
     WAF --> C
     A -->|Internet| CDN[CDN]
     CDN --> B
-    B --> LB1[Load Balancer (US-West)]
-    B --> LB2[Load Balancer (US-East)]
-    LB1 --> C1[Web Server Cluster (US-West)]
-    LB2 --> C2[Web Server Cluster (US-East)]
-    C1 --> D1[Database Server (US-West)]
-    C2 --> D2[Database Server (US-East)]
-    D1 -->|Data Storage| F1[Google Cloud Storage (US-West)]
-    D2 -->|Data Storage| F2[Google Cloud Storage (US-East)]
-    F1 -->|Backup/Recovery| I1[Google Cloud Backup Service (US-West)]
-    F2 -->|Backup/Recovery| I2[Google Cloud Backup Service (US-East)]
-    G1 --> LG1[Google Cloud Logging and Monitoring]
-    G2 --> LG2[Google Cloud Logging and Monitoring]
+    B --> LB1[Load Balancer West]
+    B --> LB2[Load Balancer East]
+    LB1 --> C1[Web Server Cluster West]
+    LB2 --> C2[Web Server Cluster East]
+    C1 --> D1[Database Server West]
+    C2 --> D2[Database Server East]
+    D1 -->|Data Storage| F1[Google Cloud Storage West]
+    D2 -->|Data Storage| F2[Google Cloud Storage East]
+    F1 -->|Backup/Recovery| I1[Google Cloud Backup West]
+    F2 -->|Backup/Recovery| I2[Google Cloud Backup East]
+    G1 --> LG1[Cloud Logging and Monitoring]
+    G2 --> LG2[Cloud Logging and Monitoring]
+
 
 
 
