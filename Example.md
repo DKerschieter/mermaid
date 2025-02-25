@@ -26,8 +26,8 @@ graph TD;
     IDS2 --> SIEM2[SIEM System]
     B -->|Traffic| WAF[Web Application Firewall]
     WAF --> C
-    A -->|Internet| CD[Content Delivery Network (CDN)]
-    CD --> B
+    A -->|Internet| CDN[Content Delivery Network (CDN)]
+    CDN --> B
     B --> LB1[Load Balancer (US-West)]
     B --> LB2[Load Balancer (US-East)]
     LB1 --> C1[Web Server Cluster (US-West)]
@@ -40,6 +40,7 @@ graph TD;
     F2 -->|Backup/Recovery| I2[Google Cloud Backup Service (US-East)]
     G1 --> LG1[Google Cloud Logging and Monitoring]
     G2 --> LG2[Google Cloud Logging and Monitoring]
+
 
 
 
