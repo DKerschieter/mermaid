@@ -1,0 +1,12 @@
+graph TD;
+    A[User] -->|Internet| B[Load Balancer]
+    B --> C[Web Server Cluster]
+    C --> D[Database Server]
+    C --> E[Cache Server]
+    D -->|Data Storage| F[Cloud Storage Service]
+    E -->|Cached Data| F[Cloud Storage Service]
+    C --> G[Application Server]
+    G -->|API Requests| H[External API Service]
+    H -->|API Responses| G
+    F -->|Backup/Recovery| I[Backup Service]
+    I -->|Restored Data| F
